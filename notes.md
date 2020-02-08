@@ -143,5 +143,32 @@ plugin de chrome de selenium. Interface grava as acoes do usuario.
 * waitforPageToLoad
 * waitForElementPresent
 
-### Interface Ferramentas
+### Diferenca entre Selenium IDE e Webdriver
+
+### XPath 
+
+Linguagem de consulta para selecionar nos de um documento
+
+* Sintax
+    tag[@attr='valor'] seleccao do tag com essas configuracoes
+    tag: input
+    @attr: attributo
+* Contains()
+  * ex: [contains(text(), ""here)]
+## configuration for running chrometest
+*   Get corresponding [driver](https://chromedriver.chromium.org/downloads) for chrome
+*   config for:
+       self.driver = webdriver.Chrome(executable_path="chromedriver_win32/chromedriver")
+        self.driver.implicitly_wait(5)
+        self.driver.maximize_window()
+        self.verificationErrors = []
+        self.accept_next_alert = True
+## test in python
     
+    python {fileTestName}
+    pytest --html={fileReportName}.html {fileTestName}
+    
+For getting elements first we should get the id or the xpath
+We can get most of the test step via Sellenium IDEm but is need to make some changes to make it work normally. Autocomplete is one example of this.
+
+crobpath to get values for xpath
