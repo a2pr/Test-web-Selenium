@@ -32,7 +32,7 @@ class MyTestCase(unittest.TestCase):
         self.driver.find_element(By.ID, "textarea-input").click()
         self.driver.find_element(By.ID, "textarea-input").send_keys("loremp ipson somthing")
         file_input = self.driver.find_element_by_xpath("//input[@id=\'file-input\']")
-        file_input.send_keys("C:/Users/A2PR/Desktop/Test-web-Selenium/pyp-project/test.txt")
+        file_input.send_keys("D:/Documents/Projects/Test-web-Selenium/pyp-project/test.txt")
         self.driver.find_element(By.NAME, "password").click()
         self.driver.find_element(By.NAME, "password").send_keys("123456")
         self.driver.find_element(By.ID, "radios2-input").click()
