@@ -56,7 +56,8 @@ class MyTestCase(unittest.TestCase):
         self.driver.find_element(By.ID, "radios2-input").click()
         self.driver.find_element(By.ID, "check-input").click()
         self.driver.find_element(By.ID, "submit-input").click()
-        self.assertIn("Formulário inválido\n×", self.driver.find_element_by_xpath("//ngb-alert[@class=\'alert alert-danger alert-dismissible\']").text)
+        self.assertIn("Formulário inválido\n×",
+                      self.driver.find_element_by_xpath("//ngb-alert[@class=\'alert alert-danger alert-dismissible\']").text)
 
     def tearDown(self):
         self.driver.close()
