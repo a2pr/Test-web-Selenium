@@ -174,3 +174,8 @@ We can get most of the test step via Sellenium IDEm but is need to make some cha
 crobpath to get values for xpath
 
 link with final [script](http://dontpad.com/automacaoweb_fev20)
+
+Dia 15/02/2020
+
+run specifics test 
+python {filename}.py {testClassName}.{testName}
