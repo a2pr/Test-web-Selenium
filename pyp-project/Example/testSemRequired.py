@@ -16,7 +16,30 @@ class MyTestCase(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
 
+    def testWithoutPassFill(self):
+        google = self.driver
+        self.driver.get("https://testingandplay.com/example/form")
+        self.driver.set_window_size(974, 938)
+        password = self.driver.find_element(By.NAME, "password")
+        password.click()
+        password.send_keys("")
+        self.driver.find_element(By.ID, "radios2-input").click()
+        self.assertIn("Senha obrigatória", self.driver.find_element_by_xpath(
+            "//div[@class=\'invalid-feedback\']").text)
+
+    def testWithoutEmailFill(self):
+        google = self.driver
+        self.driver.get("https://testingandplay.com/example/form")
+        self.driver.set_window_size(974, 938)
+        email = self.driver.find_element(By.NAME, "email")
+        email.click()
+        email.send_keys("")
+        self.driver.find_element(By.ID, "radios2-input").click()
+        self.assertIn("Email obrigatório.", self.driver.find_element_by_xpath(
+            "//div[@class=\'invalid-feedback\']").text)
+
     def testWithoutRequired(self):
+        google = self.driver
         self.driver.get("https://testingandplay.com/example/form")
         self.driver.set_window_size(974, 938)
         autocomplete = self.driver.find_element(By.XPATH, "//input[@id=\'typeahead-basic\']")
@@ -29,7 +52,7 @@ class MyTestCase(unittest.TestCase):
         self.driver.find_element(By.ID, "textarea-input").click()
         self.driver.find_element(By.ID, "textarea-input").send_keys("Hello there SMOSH GAMES")
         file = self.driver.find_element_by_xpath("//input[@id=\'file-input\']")
-        file.send_keys("D:/Documents/Projects/Test-web-Selenium/pyp-project/test.txt")
+        file.send_keys("C:/Users/A2PR/Desktop/Test-web-Selenium/pyp-project/test.txt")
         self.driver.find_element(By.ID, "radios2-input").click()
         self.driver.find_element(By.ID, "check-input").click()
         self.driver.find_element(By.ID, "submit-input").click()
