@@ -38,7 +38,8 @@ class MyTestCase(unittest.TestCase):
         self.driver.find_element(By.ID, "radios2-input").click()
         self.driver.find_element(By.ID, "check-input").click()
         self.driver.find_element(By.ID, "submit-input").click()
-        self.assertIn("Sucesso\n×", self.driver.find_element_by_xpath("//ngb-alert[@class=\'alert alert-success alert-dismissible\']").text)
+        self.assertIn("Sucesso\n×", self.driver.find_element_by_xpath(
+            "//ngb-alert[@class=\'alert alert-success alert-dismissible\']").text)
 
 
 

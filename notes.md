@@ -179,3 +179,11 @@ Dia 15/02/2020
 
 run specifics test 
 python {filename}.py {testClassName}.{testName}
+
+Selenium Grid
+
+Executar testes em varios navegadores  e suas versoes diferentes disponivels de forma remota.
+
+Jenkins
+
+Servidor automacao open souce. Para criacao,testes e reportes.

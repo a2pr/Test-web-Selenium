@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 class PythonOrgSearch(unittest.TestCase):
-    def setUp(self): 
+    def setUp(self):
         self.driver = webdriver.Chrome(executable_path="chromedriver_win32/chromedriver")
         self.driver.implicitly_wait(5)
         self.driver.maximize_window()
